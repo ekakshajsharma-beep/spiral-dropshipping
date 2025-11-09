@@ -1,0 +1,90 @@
+/* Spiral Dropshipping Theme */
+:root {
+  --bg-color: #0f0f0f;
+  --text-color: #00ffcc;
+}
+body {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  background: radial-gradient(circle at center, #000000, #0a0a0a);
+  color: #d4ff00; /* neon yellow-green */
+}
+
+header {
+  background: #111;
+  text-align: center;
+  padding: 1em;
+  box-shadow: 0 0 20px #ff0000; /* red glow */
+  border-bottom: 2px solid #00ff6a; /* green accent */
+}
+
+h1.spiral-title {
+  font-size: 3em;
+  font-weight: bold;
+  color: #ff0000;
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #00ff6a, 0 0 30px #d4ff00;
+}
+
+.spiral-line {
+  width: 100%;
+  height: 200px;
+  background: repeating-conic-gradient(from 0deg, #ff0000 0deg 30deg, #00ff6a 30deg 60deg, #d4ff00 60deg 90deg);
+  border-radius: 50%;
+  animation: spin 10s linear infinite;
+  margin: 2em auto;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #111;
+  padding: 1em;
+}
+
+nav a {
+  color: #00ff6a;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff0000;
+}
+
+.panel {
+  background: #111;
+  border: 2px solid #d4ff00;
+  border-radius: 12px;
+  padding: 1.5em;
+  margin: 2em auto;
+  width: 80%;
+  box-shadow: 0 0 25px #00ff6a;
+}
+
+.contact {
+  font-size: 1.2em;
+  color: #ff0000;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.contact span {
+  color: #d4ff00;
+  font-weight: bold;
+}
+
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1em;
+  color: #00ff6a;
+  border-top: 2px solid #ff0000;
+  box-shadow: 0 0 15px #d4ff00;
+}

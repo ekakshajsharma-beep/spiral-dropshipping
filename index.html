@@ -96,6 +96,9 @@
 <body>
 
   <header>
+    <div style="text-align: right; margin: 20px;">
+  <button id="theme-toggle">Switch to Night Ops</button>
+</div>
     <h1 class="spiral-title">Spiral Dropshipping</h1>
   </header>
 
@@ -106,6 +109,29 @@
   </nav>
 
   <div class="panel">
+    <div id="filter-controls" style="margin: 20px 0;">
+  <label for="category-filter">Filter by Category:</label>
+  <select id="category-filter">
+    <option value="all">All Categories</option>
+    <option value="cargo">Cargo</option>
+    <option value="tech">Tech</option>
+    <option value="alien">Alien Goods</option>
+  </select>
+</div>
+<div id="product-grid">
+  <div class="product" data-category="cargo">
+    <h3>Quantum Cargo Crate</h3>
+    <p>Secure interstellar shipping container.</p>
+  </div>
+  <div class="product" data-category="tech">
+    <h3>Neon Signal Booster</h3>
+    <p>Amplifies galactic communication signals.</p>
+  </div>
+  <div class="product" data-category="alien">
+    <h3>Alien Spice Pack</h3>
+    <p>Exotic flavors from the Andromeda market.</p>
+  </div>
+</div>
     <p>Welcome to Spiral. We offer reliable and scalable dropshipping solutions tailored to your business.</p>
   </div>
 
@@ -115,8 +141,9 @@
   </div>
 
   <footer>
-    © 2023 Spiral Dropshipping
+    © 2025 Spiral Dropshipping
   </footer>
 
 </body>
-</html>
+</html> 
+<script src="script.js" defer></script>
