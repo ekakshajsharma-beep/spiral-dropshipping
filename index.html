@@ -137,6 +137,23 @@
 
   <!-- Paste your contact block here -->
   <div class="contact">
+    <form action="https://formspree.io/f/xyzlygaa" method="POST" onsubmit="return showConfirmation()">
+  <label for="email">Your Email:</label>
+  <input type="email" name="email" required>
+
+  <label for="message">Your Message:</label>
+  <textarea name="message" required></textarea>
+
+  <button type="submit">Send Message</button>
+</form>
+
+<script>
+  function showConfirmation() {
+    alert("📡 Transmission sent! Await a reply from Spiral HQ.");
+    return true;
+  }
+</script> 
+
     Contact us at: <span><a href="tel:+9173045104510">+9173045104510</a></span>
   </div>
 
