@@ -3,51 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spiral</title>
-  <link rel="stylesheet" href="style.css" />
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spiral</title>
+  <title>Spiral Dropshipping</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
+<body>
 
-  <main>
-    <section id="about">
-      <h2>About Spiral</h2>
-      <p>Spiral is a modern, minimal website built for speed and style.</p>
-    </section>
-
-    <section id="features">
-      <h2>Features</h2>
-      <ul>
-        <li>Responsive design</li>
-        <li>Clean layout</li>
-        <li>Easy to expand</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message"></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Spiral</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body><body>
-  <!-- ✅ Paste everything from here down -->
+  <!-- Header -->
   <header class="neon">
-    <h1>Spiral Dropshipping</h1>
+    <div style="text-align: right; margin: 20px;">
+      <button id="theme-toggle">Switch to Night Ops</button>
+    </div>
+    <h1 class="spiral-title">Spiral Dropshipping</h1>
     <nav>
       <a href="#about">About</a>
       <a href="#features">Features</a>
@@ -55,12 +22,15 @@
     </nav>
   </header>
 
+  <!-- Main Content -->
   <main>
+    <!-- About Section -->
     <section id="about" class="neon-box">
       <h2>About Spiral</h2>
       <p>Spiral is a futuristic dropshipping platform built for speed, style, and simplicity.</p>
     </section>
 
+    <!-- Features Section -->
     <section id="features" class="neon-box">
       <h2>Features</h2>
       <ul>
@@ -70,97 +40,72 @@
       </ul>
     </section>
 
+    <!-- Product Catalog -->
+    <section class="panel neon-box">
+      <div id="filter-controls" style="margin: 20px 0;">
+        <label for="category-filter">Filter by Category:</label>
+        <select id="category-filter">
+          <option value="all">All Categories</option>
+          <option value="cargo">Cargo</option>
+          <option value="tech">Tech</option>
+          <option value="alien">Alien Goods</option>
+          <option value="stationery">Stationery</option>
+        </select>
+      </div>
+
+      <div id="product-grid">
+        <div class="product" data-category="stationery">
+          <h3>Washi Tape Set</h3>
+          <p>Decorative masking tapes with traditional Japanese patterns and pastel neon glow.</p>
+        </div>
+        <div class="product" data-category="stationery">
+          <h3>Brush Pen Trio</h3>
+          <p>Soft-tip pens for calligraphy and sketching, inspired by Kyoto ink traditions.</p>
+        </div>
+        <div class="product" data-category="stationery">
+          <h3>Midori MD Notebook</h3>
+          <p>Minimalist design with smooth paper, perfect for journaling or cosmic schematics.</p>
+        </div>
+        <div class="product" data-category="stationery">
+          <h3>Sakura Gelly Roll Pens</h3>
+          <p>Gel pens with vibrant neon ink — ideal for writing in low-light space stations.</p>
+        </div>
+        <div class="product" data-category="stationery">
+          <h3>Origami Paper Pack</h3>
+          <p>Colorful sheets for folding art or encrypted message delivery.</p>
+        </div>
+      </div>
+      <p>Welcome to Spiral. Our catalog now features curated Japanese stationery — elegant, functional, and ready to ship across galaxies.</p>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="neon-box">
       <h2>Contact Us</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message"></textarea>
-        <button type="submit">Send</button>
+      <form action="https://formspree.io/f/xyzlygaa" method="POST" onsubmit="return showConfirmation()">
+        <label for="email">Your Email:</label>
+        <input type="email" name="email" required>
+
+        <label for="message">Your Message:</label>
+        <textarea name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
       </form>
+      <p>Contact us at: <a href="tel:+9173045104510">+9173045104510</a></p>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="neon">
-    <p>&copy; 2025 Spiral</p>
+    <p>&copy; 2025 Spiral Dropshipping</p>
   </footer>
 
-  <script src="script.js"></script>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Spiral Dropshipping</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <header>
-    <div style="text-align: right; margin: 20px;">
-  <button id="theme-toggle">Switch to Night Ops</button>
-</div>
-    <h1 class="spiral-title">Spiral Dropshipping</h1>
-  </header>
-
-  <nav>
-    <a href="#">About Us</a>
-    <a href="#">Services</a>
-    <a href="#">Contact Us</a>
-  </nav>
-
-  <div class="panel">
-    <div id="filter-controls" style="margin: 20px 0;">
-  <label for="category-filter">Filter by Category:</label>
-  <select id="category-filter">
-    <option value="all">All Categories</option>
-    <option value="cargo">Cargo</option>
-    <option value="tech">Tech</option>
-    <option value="alien">Alien Goods</option>
-  </select>
-</div>
-<div id="product-grid">
-  <div class="product" data-category="cargo">
-    <h3>Quantum Cargo Crate</h3>
-    <p>Secure interstellar shipping container.</p>
-  </div>
-  <div class="product" data-category="tech">
-    <h3>Neon Signal Booster</h3>
-    <p>Amplifies galactic communication signals.</p>
-  </div>
-  <div class="product" data-category="alien">
-    <h3>Alien Spice Pack</h3>
-    <p>Exotic flavors from the Andromeda market.</p>
-  </div>
-</div>
-    <p>Welcome to Spiral. We offer reliable and scalable dropshipping solutions tailored to your business.</p>
-  </div>
-
-  <!-- Paste your contact block here -->
-  <div class="contact">
-    <form action="https://formspree.io/f/xyzlygaa" method="POST" onsubmit="return showConfirmation()">
-  <label for="email">Your Email:</label>
-  <input type="email" name="email" required>
-
-  <label for="message">Your Message:</label>
-  <textarea name="message" required></textarea>
-
-  <button type="submit">Send Message</button>
-</form>
-
-<script>
-  function showConfirmation() {
-    alert("📡 Transmission sent! Await a reply from Spiral HQ.");
-    return true;
-  }
-</script> 
-
-    Contact us at: <span><a href="tel:+9173045104510">+9173045104510</a></span>
-  </div>
-
-  <footer>
-    © 2025 Spiral Dropshipping
-  </footer>
-
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+  <script>
+    function showConfirmation() {
+      alert("📡 Transmission sent! Await a reply from Spiral HQ.");
+      return true;
+    }
+  </script>
 </body>
-</html> 
-<script src="script.js" defer></script>
+</html>
