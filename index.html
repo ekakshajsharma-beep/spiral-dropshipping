@@ -6,8 +6,11 @@
   <title>Spiral Dropshipping</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
 
   <!-- Header -->
   <header class="neon">
@@ -45,13 +48,16 @@
       <div id="filter-controls" style="margin: 20px 0;">
         <label for="category-filter">Filter by Category:</label>
         <select id="category-filter">
-          <option value="all">All Categories</option>
-          <option value="cargo">Cargo</option>
-          <option value="tech">Tech</option>
-          <option value="alien">Alien Goods</option>
-          <option value="stationery">Stationery</option>
+          <option value="all">All Stationery</option>
+          <option value="pens">Pens</option>
+          <option value="notebooks">Notebooks</option>
+          <option value="tape">Tape</option>
+          <option value="paper">Paper</option>
         </select>
       </div>
+
+      <!-- 🔍 Live Search Bar -->
+      <input type="text" id="search-bar" placeholder="Search products..." />
 
       <div id="product-grid">
         <div class="product" data-category="stationery">
@@ -101,6 +107,7 @@
 
   <!-- Scripts -->
   <script src="script.js" defer></script>
+  <script src="particles-config.js" defer></script>
   <script>
     function showConfirmation() {
       alert("📡 Transmission sent! Await a reply from Spiral HQ.");
