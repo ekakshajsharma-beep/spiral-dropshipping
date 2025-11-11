@@ -3,6 +3,7 @@
   --bg-color: #0f0f0f;
   --text-color: #00ffcc;
 }
+
 body {
   font-family: 'Orbitron', sans-serif;
   margin: 0;
@@ -66,6 +67,44 @@ nav a:hover {
   margin: 2em auto;
   width: 80%;
   box-shadow: 0 0 25px #00ff6a;
+}
+
+/* 🔽 Category Filter Dropdown Styling */
+#category-filter {
+  background-color: black;
+  color: #00ffff;
+  border: 2px solid #00ffff;
+  font-family: 'Orbitron', sans-serif;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #00ffff;
+  transition: box-shadow 0.3s ease;
+}
+
+#category-filter:hover {
+  box-shadow: 0 0 20px #00ffff;
+}
+
+label[for="category-filter"] {
+  color: #d4ff00;
+  font-weight: bold;
+  text-shadow: 0 0 5px #00ff6a;
+}
+
+/* 🪐 Animated Product Cards */
+.product {
+  background: #1a1a1a;
+  border: 1px solid #00ffcc;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 1em 0;
+  box-shadow: 0 0 10px #00ffcc;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff00ff;
 }
 
 .contact {
