@@ -57,3 +57,28 @@ if (searchBar) {
     });
   });
 }
+
+// 🌌 Image Upload Preview Logic
+const imageInput = document.getElementById('image-upload');
+const previewImg = document.getElementById('image-preview');
+const previewContainer = document.getElementById('preview-container');
+
+if (imageInput && previewImg && previewContainer) {
+  imageInput.addEventListener('change', function () {
+    const file = this.files[0];
+    if (file && file.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        previewImg.src = e.target.result;
+        previewImg.style.display = 'block';
+        previewContainer.querySelector('p').style.display = 'none';
+      };
+      reader.readAsDataURL(file);
+    } else {
+      previewImg.src = '';
+      previewImg.style.display = 'none';
+      previewContainer.querySelector('p').textContent = 'Invalid file type';
+      previewContainer.querySelector('p').style.display = 'block';
+    }
+  });
+}

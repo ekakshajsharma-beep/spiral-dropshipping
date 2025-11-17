@@ -27,16 +27,6 @@ h1.spiral-title {
   text-shadow: 0 0 10px #ff0000, 0 0 20px #00ff6a, 0 0 30px #d4ff00;
 }
 
-/* 🌀 Spiral Line Animation */
-.spiral-line {
-  width: 100%;
-  height: 200px;
-  background: repeating-conic-gradient(from 0deg, #ff0000 0deg 30deg, #00ff6a 30deg 60deg, #d4ff00 60deg 90deg);
-  border-radius: 50%;
-  animation: spin 10s linear infinite;
-  margin: 2em auto;
-}
-
 /* 🧭 Navigation */
 nav {
   display: flex;
@@ -55,17 +45,6 @@ nav a {
 
 nav a:hover {
   color: #ff0000;
-}
-
-/* 📦 Panels */
-.panel {
-  background: #111;
-  border: 2px solid #d4ff00;
-  border-radius: 12px;
-  padding: 1.5em;
-  margin: 2em auto;
-  width: 80%;
-  box-shadow: 0 0 25px #00ff6a;
 }
 
 /* 🔽 Category Filter Dropdown */
@@ -88,6 +67,26 @@ label[for="category-filter"] {
   color: #d4ff00;
   font-weight: bold;
   text-shadow: 0 0 5px #00ff6a;
+}
+
+/* 🔍 Live Search Bar */
+#search-bar {
+  width: 80%;
+  padding: 10px;
+  font-size: 1em;
+  margin: 1em auto;
+  display: block;
+  border: 2px solid #00ffff;
+  border-radius: 8px;
+  background-color: #111;
+  color: #00ffff;
+  box-shadow: 0 0 10px #00ffff;
+  transition: box-shadow 0.3s ease;
+}
+
+#search-bar::placeholder {
+  color: #00ffff;
+  opacity: 0.6;
 }
 
 /* 🪐 Product Cards */
@@ -119,6 +118,16 @@ label[for="category-filter"] {
   font-weight: bold;
 }
 
+/* 📞 Persistent Contact Number */
+#contact-number {
+  margin-top: 2em;
+  text-align: center;
+  font-size: 1.2em;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+  font-weight: bold;
+}
+
 /* 🧿 Footer */
 footer {
   background: #111;
@@ -129,86 +138,6 @@ footer {
   box-shadow: 0 0 15px #d4ff00;
 }
 
-/* 🚀 Landing Page */
-.landing-header {
-  text-align: center;
-  padding: 5em 2em;
-  background: radial-gradient(circle at center, #000000, #0a0a0a);
-  color: #00ffcc;
-  animation: fadeIn 2s ease-in;
-}
-
-.logo-glow {
-  font-size: 4em;
-  color: #ff0000;
-  text-shadow: 0 0 20px #ff0000, 0 0 40px #00ff6a;
-}
-
-.tagline {
-  font-size: 1.5em;
-  margin-top: 1em;
-  color: #d4ff00;
-  text-shadow: 0 0 10px #d4ff00;
-}
-
-#enter-button {
-  margin-top: 2em;
-  padding: 1em 2em;
-  font-size: 1.2em;
-  background-color: black;
-  color: #00ffff;
-  border: 2px solid #00ffff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #00ffff;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease;
-}
-
-#enter-button:hover {
-  box-shadow: 0 0 20px #ff00ff;
-}
-
-/* 🌀 Orbital Animation */
-.orbital-animation {
-  width: 200px;
-  height: 200px;
-  margin: 3em auto;
-  border-radius: 50%;
-  background: repeating-conic-gradient(from 0deg, #ff0000 0deg 30deg, #00ff6a 30deg 60deg, #d4ff00 60deg 90deg);
-  animation: spin 8s linear infinite;
-  box-shadow: 0 0 30px #00ffcc;
-}
-
-/* 🎬 Keyframes */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-/* 🔍 Live Search Bar */
-#search-bar {
-  width: 80%;
-  padding: 10px;
-  font-size: 1em;
-  margin: 1em auto;
-  display: block;
-  border: 2px solid #00ffff;
-  border-radius: 8px;
-  background-color: #111;
-  color: #00ffff;
-  box-shadow: 0 0 10px #00ffff;
-  transition: box-shadow 0.3s ease;
-}
-
-#search-bar::placeholder {
-  color: #00ffff;
-  opacity: 0.6;
-}
-
 /* 🌌 Particle Background */
 #particles-js {
   position: fixed;
@@ -217,4 +146,59 @@ footer {
   z-index: -1;
   top: 0;
   left: 0;
+}
+
+/* === Spiral Image Upload Styles === */
+#upload-box {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 2px solid #00ffcc;
+  border-radius: 8px;
+  background-color: #0f0f0f;
+  color: #00ffcc;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#image-upload {
+  margin-bottom: 1rem;
+  border: none;
+  background: #000;
+  color: #00ffcc;
+}
+
+#preview-container {
+  border: 1px dashed #39ff14;
+  padding: 1rem;
+  text-align: center;
+}
+
+#image-preview {
+  max-width: 100%;
+  border: 2px solid #39ff14;
+  border-radius: 4px;
+  margin-top: 1rem;
+  animation: neonPulse 2s infinite;
+}
+
+/* 🎬 Keyframes */
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14;
+  }
+  50% {
+    box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
+  }
+  100% {
+    box-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }

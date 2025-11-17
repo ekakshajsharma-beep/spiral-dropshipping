@@ -6,46 +6,30 @@
   <title>Spiral Dropshipping</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
-  <!-- Particle Background -->
+  <!-- Particles Background -->
   <div id="particles-js"></div>
 
-  <!-- Header -->
   <header class="neon">
-    <div style="text-align: right; margin: 20px;">
-      <button id="theme-toggle">Switch to Night Ops</button>
-    </div>
     <h1 class="spiral-title">Spiral Dropshipping</h1>
     <nav>
       <a href="#about">About</a>
-      <a href="#features">Features</a>
+      <a href="#catalog">Catalog</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- Main Content -->
   <main>
-    <!-- About Section -->
     <section id="about" class="neon-box">
       <h2>About Spiral</h2>
       <p>Spiral is a futuristic dropshipping platform built for speed, style, and simplicity.</p>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="neon-box">
-      <h2>Features</h2>
-      <ul>
-        <li>Automated product syncing</li>
-        <li>Real-time analytics</li>
-        <li>Global supplier network</li>
-      </ul>
-    </section>
+    <section id="catalog" class="neon-box">
+      <h2>Product Catalog</h2>
 
-    <!-- Product Catalog -->
-    <section class="panel neon-box">
-      <div id="filter-controls" style="margin: 20px 0;">
+      <div id="filter-controls">
         <label for="category-filter">Filter by Category:</label>
         <select id="category-filter">
           <option value="all">All Stationery</option>
@@ -56,38 +40,53 @@
         </select>
       </div>
 
-      <!-- 🔍 Live Search Bar -->
       <input type="text" id="search-bar" placeholder="Search products..." />
 
-      <div id="product-grid">
-        <div class="product" data-category="stationery">
-          <h3>Washi Tape Set</h3>
-          <p>Decorative masking tapes with traditional Japanese patterns and pastel neon glow.</p>
-        </div>
-        <div class="product" data-category="stationery">
-          <h3>Brush Pen Trio</h3>
-          <p>Soft-tip pens for calligraphy and sketching, inspired by Kyoto ink traditions.</p>
-        </div>
-        <div class="product" data-category="stationery">
-          <h3>Midori MD Notebook</h3>
-          <p>Minimalist design with smooth paper, perfect for journaling or cosmic schematics.</p>
-        </div>
-        <div class="product" data-category="stationery">
-          <h3>Sakura Gelly Roll Pens</h3>
-          <p>Gel pens with vibrant neon ink — ideal for writing in low-light space stations.</p>
-        </div>
-        <div class="product" data-category="stationery">
-          <h3>Origami Paper Pack</h3>
-          <p>Colorful sheets for folding art or encrypted message delivery.</p>
+      <div id="upload-box" class="neon-box">
+        <h3>Upload Product Image</h3>
+        <input type="file" id="image-upload" accept="image/*" />
+        <div id="preview-container">
+          <p>No image selected</p>
+          <img id="image-preview" src="" alt="Preview" style="display:none;" />
         </div>
       </div>
-      <p>Welcome to Spiral. Our catalog now features curated Japanese stationery — elegant, functional, and ready to ship across galaxies.</p>
+
+      <div id="product-grid">
+        <div class="product" data-category="tape">
+          <h3>Washi Tape Set</h3>
+          <img src="images/washi-tape.jpg" alt="Washi Tape Set">
+          <p>Signal Seals – Patterned for planetary journaling</p>
+        </div>
+
+        <div class="product" data-category="pens">
+          <h3>Brush Pen Trio</h3>
+          <img src="images/brush-pens.jpg" alt="Brush Pen Trio">
+          <p>Kyoto Ink Blades – For precision strokes in zero gravity</p>
+        </div>
+
+        <div class="product" data-category="notebooks">
+          <h3>Midori MD Notebook</h3>
+          <img src="images/midori-notebook.jpg" alt="Midori MD Notebook">
+          <p>Data Log Alpha – Smooth paper for cosmic schematics</p>
+        </div>
+
+        <div class="product" data-category="pens">
+          <h3>Sakura Gelly Roll Pens</h3>
+          <img src="images/gelly-roll.jpg" alt="Sakura Gelly Roll Pens">
+          <p>Neon Script Emitters – Write in the dark, glow in the void</p>
+        </div>
+
+        <div class="product" data-category="paper">
+          <h3>Origami Paper Pack</h3>
+          <img src="images/origami-pack.jpg" alt="Origami Paper Pack">
+          <p>Foldable Encryption Sheets – For art or covert messages</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="neon-box">
       <h2>Contact Us</h2>
-      <form action="https://formspree.io/f/xyzlygaa" method="POST" onsubmit="return showConfirmation()">
+      <form action="https://formspree.io/f/xyzlygaa" method="POST">
         <label for="email">Your Email:</label>
         <input type="email" name="email" required>
 
@@ -96,23 +95,20 @@
 
         <button type="submit">Send Message</button>
       </form>
-      <p>Contact us at: <a href="tel:+9173045104510">+9173045104510</a></p>
+
+      <!-- Persistent Contact Number -->
+      <div id="contact-number">
+        <p>📞 +91-9876543210</p>
+      </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="neon">
     <p>&copy; 2025 Spiral Dropshipping</p>
   </footer>
 
-  <!-- Scripts -->
-  <script src="script.js" defer></script>
-  <script src="particles-config.js" defer></script>
-  <script>
-    function showConfirmation() {
-      alert("📡 Transmission sent! Await a reply from Spiral HQ.");
-      return true;
-    }
-  </script>
+  <!-- Particles Script -->
+  <script src="particles.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
