@@ -58,7 +58,7 @@ if (searchBar) {
   });
 }
 
-// 🌌 Image Upload Preview Logic
+// 🌌 Image Upload Preview Logic with Persistence
 const imageInput = document.getElementById('image-upload');
 const previewImg = document.getElementById('image-preview');
 const previewContainer = document.getElementById('preview-container');
@@ -69,9 +69,13 @@ if (imageInput && previewImg && previewContainer) {
     if (file && file.type.startsWith('image/')) {
       const reader = new FileReader();
       reader.onload = function (e) {
-        previewImg.src = e.target.result;
+        const imageData = e.target.result;
+        previewImg.src = imageData;
         previewImg.style.display = 'block';
         previewContainer.querySelector('p').style.display = 'none';
+
+        // Save image to localStorage
+        localStorage.setItem('spiralImage', imageData);
       };
       reader.readAsDataURL(file);
     } else {
@@ -79,6 +83,16 @@ if (imageInput && previewImg && previewContainer) {
       previewImg.style.display = 'none';
       previewContainer.querySelector('p').textContent = 'Invalid file type';
       previewContainer.querySelector('p').style.display = 'block';
+    }
+  });
+
+  // Load saved image on page refresh
+  window.addEventListener('DOMContentLoaded', function () {
+    const savedImage = localStorage.getItem('spiralImage');
+    if (savedImage) {
+      previewImg.src = savedImage;
+      previewImg.style.display = 'block';
+      previewContainer.querySelector('p').style.display = 'none';
     }
   });
 }

@@ -98,11 +98,21 @@ label[for="category-filter"] {
   margin: 1em 0;
   box-shadow: 0 0 10px #00ffcc;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden; /* keeps hover expansion inside */
 }
 
 .product:hover {
-  transform: scale(1.05);
+  transform: scale(1.03); /* smaller expansion */
   box-shadow: 0 0 20px #ff00ff;
+}
+
+/* Prevent product name overflow */
+.product h2, .product-name {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* 📬 Contact Section */
